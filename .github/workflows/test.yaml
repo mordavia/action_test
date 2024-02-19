@@ -22,7 +22,7 @@ jobs:
 
       - name: FA test
         #uses: mordavia/fusionauth_github_marketplace_action
-        uses: mordavia/fusionauth_github_marketplace_action@v3
+        uses: mordavia/fusionauth_github_marketplace_action@v5
         #uses: actions/hello-world-docker-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
