@@ -21,29 +21,28 @@ jobs:
         uses: actions/checkout@v4
 
       - name: FA test
-        #uses: mordavia/fusionauth_github_marketplace_action
         uses: mordavia/fusionauth_github_marketplace_action@main
         #uses: actions/hello-world-docker-action@v1
 
-    #   - name: Set up Node.js
-    #     uses: actions/setup-node@v4
-    #     with:
-    #       node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
     #   - name: Start FusionAuth in Docker
     #     run: docker-compose up -d # -d in background
 
-    #   - name: Install npm dependencies
-    #     run: |
-    #       npm install
-    #       npx playwright install-deps
-    #       npx playwright install
-    #     working-directory: ./app
+      - name: Install npm dependencies
+        run: |
+          npm install
+          npx playwright install-deps
+          npx playwright install
+        working-directory: ./app
 
-    #   - name: Start app
-    #     run: npm run start & # & in background
-    #     working-directory: ./app
+      - name: Start app
+        run: npm run start & # & in background
+        working-directory: ./app
 
-    #   - name: Run Playwright tests
-    #     run: npx playwright test --project=chromium
-    #     working-directory: ./app
+      - name: Run Playwright tests
+        run: npx playwright test --project=chromium
+        working-directory: ./app
